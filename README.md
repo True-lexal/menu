@@ -20,7 +20,7 @@ Test work
 ``` python manage.py runserver ```
 
 
-ТЗ от UpTrade :
+ТЗ от UpTrader :
 
 Задача :
 Нужно сделать django app, который будет реализовывать древовидное меню, соблюдая следующие условия:
