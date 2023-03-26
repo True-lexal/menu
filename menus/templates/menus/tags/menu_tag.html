@@ -1,0 +1,16 @@
+<ul>
+{% for el in menu %}
+    {% if el.parent.pk == parent_pk %}
+        <li>
+        {% if el.url == current_url %}
+            {{ el.title }}
+        {% else %}
+            <a href="{{ el.get_absolute_url }}">{{ el.title }}</a>
+        {% endif %}
+        {% if el.pk in menu_list %}
+            {% include 'menus/tags/menu_tag.html' with parent_pk=el.pk %}
+        {% endif %}
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
